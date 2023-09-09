@@ -1,10 +1,11 @@
 void main() {
   Reccursion rec = Reccursion();
-  List<int> array = [1, 3, 6, 7, 8, 10, 19];
-  int target = 19;
-  print(rec.search(array, target, 0, array.length - 1));
+  // List<int> array = [1, 3, 6, 7, 8, 10, 19];
+  // int target = 19;
+  // print(rec.search(array, target, 0, array.length - 1));
 
-  // print(rec.isFact(5));
+  print(rec.isFact(5));
+  
 }
 
 class Reccursion {
