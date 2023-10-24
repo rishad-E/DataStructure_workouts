@@ -1,6 +1,8 @@
 void main() {
-  print(balancedString('[{}]'));
+  // print(balancedString('[{}]'));
+  print(test(123));
 }
+
 bool? balancedString(String a) {
   List<String> stack = [];
   for (var i = 0; i < a.length; i++) {
@@ -19,4 +21,15 @@ bool? balancedString(String a) {
     }
   }
   return stack.isEmpty;
+}
+
+int test(int n) {
+  int sum = 0;
+  int m;
+  while (n > 0) {
+    m = n % 10;
+    sum = sum + m;
+    n = n ~/ 10;
+  }
+  return sum;
 }

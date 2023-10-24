@@ -1,7 +1,7 @@
 void main() {
   ArrayQuestions obj = ArrayQuestions();
 //  List<int> arr = [5, 7, 8, 9, 10, 11];
-//   // obj.duplicate();
+  // obj.duplicate();
 //  int found = obj.binarySearch(arr,1);
 //   // obj.freee();
 //  if (found != -1) {
@@ -11,10 +11,11 @@ void main() {
 //   print("not");
 //   // print(found);
 //  }
-//   // obj.freee();
+  // obj.freee();
 //   // obj.insertion();
 //   // obj.mergee();
-obj.merge();
+// obj.merge();
+  obj.deleteDup();
 }
 
 class ArrayQuestions {
@@ -52,7 +53,6 @@ class ArrayQuestions {
           // for (var k = i; k < arr.length; k++) {
           //   arr[k]=arr[k+1];
           // }
-
         }
       }
     }
@@ -78,7 +78,7 @@ class ArrayQuestions {
   }
 
   void freee() {
-    List arr = [1, 2, 2, 1, 3, 1, 3, 3];
+    List arr = [1, 2, 2, 1, 3, 1, 3, 3, 5];
 
     for (var i = 0; i < arr.length; i++) {
       int count = 1;
@@ -95,7 +95,7 @@ class ArrayQuestions {
   }
 
   void deleteDup() {
-    List arr = [1, 2, 2, 1, 3, 1, 3];
+    List arr = [1, 2, 2, 1, 3, 3, 1, 3];
     for (var i = 0; i < arr.length; i++) {
       for (var j = i + 1; j < arr.length; j++) {
         if (arr[i] == arr[j]) {
@@ -138,29 +138,24 @@ class ArrayQuestions {
       }
     }
   }
-  
+
 // void main() {
 //   List<int>arr =[3,4,5,8,9,11];
 //   print(check(arr));
 // }
 
-List<int>? check(List<int> arr) {
-  int k = arr[0];
-  List<int> res = [];
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] != k) {
-      while (arr[i] != k) {
-        res.add(k);
-        k++;
+  List<int>? check(List<int> arr) {
+    int k = arr[0];
+    List<int> res = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] != k) {
+        while (arr[i] != k) {
+          res.add(k);
+          k++;
+        }
       }
+      k++;
     }
-    k++;
-    
+    return res;
   }
-  return res;
-}
-
-
-
-
 }
